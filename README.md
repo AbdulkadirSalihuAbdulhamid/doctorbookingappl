@@ -61,51 +61,43 @@ DoctorBookingAppl is a simple doctor booking application built with SvelteKit. I
 
 The project follows a well-organized folder structure typical of a SvelteKit application:
 
--doctorbookingappl/
-├── .gitignore
-├── .npmrc
-├── .prettierignore
-├── .prettierrc
-├── README.md
-├── eslint.config.js
-├── jsconfig.js
-├── package-lock.json
-├── package.json
-├── src/
-│   ├── app.html
-│   ├── lib/
-│   │   ├── components/
-│   │   │   ├── BookingCard.svelte
-│   │   │   ├── DoctorCard.svelte
-│   │   │   ├── DoctorFilter.svelte
-│   │   │   ├── ErrorMessage.svelte
-│   │   │   ├── Footer.svelte
-│   │   │   ├── Header.svelte
-│   │   │   ├── LoadingSpinner.svelte
-│   │   │   └── Navigation.svelte
-│   │   ├── index.js
-│   │   └── services/
-│   │       └── api.js
-│   ├── routes/
-│   │   ├── +layout.svelte
-│   │   ├── +page.svelte
-│   │   ├── about/
-│   │   │   └── +page.svelte
-│   │   ├── book/
-│   │   │   └── [id]/
-│   │   │       └── +page.svelte
-│   │   ├── bookings/
-│   │   │   └── +page.svelte
-│   │   └── doctors/
-│   │       └── +page.svelte
-│   ├── styles/
-│   │   ├── README.md
-│   │   └── global.scss
-├── static/
-│   └── favicon.png
-├── svelte.config.js
-└── vite.config.js
-
+- `doctorbookingappl/`
+  - `.gitignore`: Specifies files to ignore in Git.
+  - `.npmrc`: Configuration for npm.
+  - `.prettierignore`: Files to exclude from Prettier formatting.
+  - `.prettierrc`: Prettier configuration.
+  - `README.md`: Project documentation.
+  - `eslint.config.js`: ESLint configuration.
+  - `jsconfig.json`: JavaScript configuration.
+  - `package-lock.json`: Exact dependency tree.
+  - `package.json`: Project dependencies and scripts.
+  - `src/`: Source code directory
+    - `app.html`: Base HTML template.
+    - `lib/`: Reusable logic and components
+      - `components/`: Custom Svelte components
+        - `BookingCard.svelte`, `DoctorCard.svelte`, `DoctorFilter.svelte`, `ErrorMessage.svelte`, `Footer.svelte`, `Header.svelte`, `LoadingSpinner.svelte`, `Navigation.svelte`
+      - `index.js`: Entry point for library modules.
+      - `services/`: API service logic
+        - `api.js`: Handles API calls and in-memory data.
+    - `routes/`: Application routes
+      - `+layout.svelte`: Layout for all pages.
+      - `+page.svelte`: Home page.
+      - `about/`: About page
+        - `+page.svelte`
+      - `book/`: Booking pages
+        - `[id]/`: Dynamic route for booking
+          - `+page.svelte`
+      - `bookings/`: Bookings management
+        - `+page.svelte`
+      - `doctors/`: Doctors list
+        - `+page.svelte`
+    - `styles/`: Styling files
+      - `README.md`: Style guide notes.
+      - `global.scss`: Global SCSS styles.
+  - `static/`: Static assets
+    - `favicon.png`: Favicon image.
+  - `svelte.config.js`: SvelteKit configuration.
+  - `vite.config.js`: Vite configuration.
 
 ## Description of Stored Data
 
